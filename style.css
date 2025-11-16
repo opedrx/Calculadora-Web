@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+.fundo {
+    background-image: linear-gradient(45deg, black, crimson);
+    height: 100vh;
+    min-height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 20px;
+}
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; 
+    gap: 30px; 
+    align-items: flex-start; 
+}
+.calculadora {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 15px;
+}
+.botao {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    background-color: rgb(31, 31, 31);
+    border: none;
+    color: #fff;
+}
+.botao:hover {
+    background-color: black;
+}
+#resultado {
+    background-color: white;
+    width: 207px;
+    height: 30px;
+    margin: 5px;
+    font-size: 25px;
+    color: black;
+    text-align: right;
+    padding: 5px;
+    overflow: hidden; 
+}
+.historico-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    width: 250px; 
+    max-height: 400px;
+    overflow-y: auto; 
+    text-align: left;
+}
+.historico-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+#historico-lista {
+    list-style: none; 
+    padding: 0;
+}
+#historico-lista li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    word-wrap: break-word; 
+}
+@media screen and (max-width: 768px) {
+    .fundo {
+        height: auto;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .main-content {
+        flex-direction: column;
+        position: static;
+        transform: none; 
+        width: 100%;
+        padding: 0 10px;
+        gap: 20px;
+    }
+    .calculadora {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .historico-container {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+        max-height: 200px;
+    }
+}
